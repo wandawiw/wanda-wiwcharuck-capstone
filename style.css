@@ -1,0 +1,172 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #222;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #111;
+  padding: 15px;
+  font-size: 24px;
+}
+
+h1 {
+  margin: 0;
+  color: yellow;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+#genre-selection {
+  padding: 20px;
+}
+
+#genre-selection button {
+  padding: 15px 25px;
+  margin: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+#genre-selection button:nth-child(1) { background-color: #D62828; color: white; }
+#genre-selection button:nth-child(2) {background-color: #8B4513; color: white; }
+#genre-selection button:nth-child(3) {background-color: #FF69B4; color: white; }
+
+#genre-selection button:hover {
+  transform: scale(1.1);
+}
+
+#game-room {
+  padding: 20px;
+  background-color: #444;
+  transition: background 1s, color 1s;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+#clue-container {
+  margin-top: 20px;
+}
+
+audio {
+  display: block;
+  margin: 10px auto;
+}
+
+#image-clue, #video-clue {
+  width: 300px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+#image-clue:hover, #video-clue:hover {
+transform: scale(1.1);
+box-shadow: 0px 0px 10px white;
+}
+
+#hint-container {
+  margin-top: 10px;
+}
+
+#hint-container p {
+  font-style: italic;
+  color: lightgray;
+  transition: 0.5s;
+}
+
+#answer-section {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+button {
+  padding: 12px;
+  font-size: 18px;
+  background: yellow;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: orange;
+  transform: scale(1.1);
+}
+
+#door-status {
+  margin-top: 20px;
+}
+
+.locked {
+  font-size: 50px;
+  color: red;
+}
+
+.unlocked {
+  font-size: 50px;
+  color: green;
+  animation: openDoor 1s ease-in-out;
+}
+
+@keyframes openDoor {
+  0% { transform: rotateY(0); }
+  100% { transform: rotateY(90deg); }
+}
+
+.rock-room {
+  background: url('rock-bg.jpg') no-repeat center center/cover;
+  color: #E63946;
+}
+
+.country-room {
+  background: url('country-bg.jpg') no-repeat center center/cover;
+  color: #F4A261;
+}
+
+.pop-room {
+  background: url('pop-bg.jpg') no-repeat center center/cover;
+  color: #FF69B4;
+}
+
+footer {
+  background: #111;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #ccc;
+}
