@@ -8,6 +8,7 @@ html, body {
   color: white;
   display: flex;
   flex-direction: column;
+  transition: background 1s ease-in-out, color 0.5s ease-in-out;
 }
 
 header {
@@ -30,6 +31,22 @@ main {
   padding-bottom: 20px;
 }
 
+p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+#question-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#door-status p {
+  font-size: 22px;
+  font-weight: bold;
+  color: yellow;
+}
+
 #genre-selection {
   padding: 20px;
 }
@@ -41,7 +58,7 @@ main {
   cursor: pointer;
   border: none;
   border-radius: 10px;
-  transition: 0.3s;
+  transition: transform 0.3s, background 0.3s;
 }
 
 #genre-selection button:nth-child(1) { background-color: #D62828; color: white; }
@@ -54,12 +71,14 @@ main {
 
 #game-room {
   padding: 20px;
-  background-color: #444;
+  background-color: rgba(68, 68, 68, 0.9);
   transition: background 1s, color 1s;
   width: 80%;
-  max-width: 600px;
+  max-width: 800px;
   margin: auto;
   border-radius: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
 }
 
 .hidden {
@@ -70,32 +89,22 @@ main {
   margin-top: 20px;
 }
 
+#clue-container img {
+  display: block;
+  width: 250px;
+  margin: 15px auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px white;
+  transition: transform 0.3s ease-in-out;
+}
+
+#clue-container img:hover {
+  transform: scale(1.1);
+}
+
 audio {
   display: block;
   margin: 10px auto;
-}
-
-#image-clue, #video-clue {
-  width: 300px;
-  cursor: pointer;
-  margin-top: 20px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-#image-clue:hover, #video-clue:hover {
-transform: scale(1.1);
-box-shadow: 0px 0px 10px white;
-}
-
-#hint-container {
-  margin-top: 10px;
-}
-
-#hint-container p {
-  font-style: italic;
-  color: lightgray;
-  transition: 0.5s;
 }
 
 #answer-section {
@@ -117,7 +126,7 @@ button {
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: transform 0.3s, background 0.3s;
   margin-top: 10px;
 }
 
@@ -147,7 +156,7 @@ button:hover {
 }
 
 .rock-room {
-  background: url('rock-bg.jpg') no-repeat center center/cover;
+  background: url('images/rock-background.jpg') no-repeat center center/cover;
   color: #E63946;
 }
 
